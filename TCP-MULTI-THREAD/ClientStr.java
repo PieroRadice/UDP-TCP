@@ -1,5 +1,3 @@
-package clientStr;
-
 import java.io.*;
 import java.net.*;
 public class ClientStr {

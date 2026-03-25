@@ -25,48 +25,59 @@ Implementazione di comunicazioni UDP, incluso multicast.
 ## Compilazione ed Esecuzione
 
 ### TCP Single-Thread
-```bash
+```powershell
 # Compilazione
-javac TCP-SINGLE-THREAD/ServerStr.java
-javac TCP-SINGLE-THREAD/ClientThread.java
+cd TCP-SINGLE-THREAD
+javac ServerStr.java ClientThread.java
 
 # Esecuzione (terminali separati)
-java -cp TCP-SINGLE-THREAD ServerStr
-java -cp TCP-SINGLE-THREAD ClientThread
+# Terminale 1 - Server
+java ServerStr
+
+# Terminale 2 - Client
+java ClientThread
 ```
 
 ### TCP Multi-Thread
-```bash
+```powershell
 # Compilazione
-javac TCP-MULTI-THREAD/MultiServer.java
-javac TCP-MULTI-THREAD/ServerThread.java
-javac TCP-MULTI-THREAD/ClientStr.java
+cd TCP-MULTI-THREAD
+javac MultiServer.java ServerThread.java ClientStr.java
 
 # Esecuzione (terminali separati)
-java -cp TCP-MULTI-THREAD MultiServer
-java -cp TCP-MULTI-THREAD ClientStr
+# Terminale 1 - Server (avvia ServerThread che contiene il main)
+java ServerThread
+
+# Terminale 2 e 3 - Client (puoi aprire più client)
+java ClientStr
 ```
 
 ### UDP
-```bash
+```powershell
 # Compilazione
-javac UDP/UDPServer.java
-javac UDP/UDPClient.java
+cd UDP
+javac UDPServer.java UDPClient.java
 
 # Esecuzione (terminali separati)
-java -cp UDP UDPServer
-java -cp UDP UDPClient
+# Terminale 1 - Server
+java UDPServer
+
+# Terminale 2 - Client
+java UDPClient
 ```
 
 ### Multicast
-```bash
+```powershell
 # Compilazione
-javac UDP/MulticastServer.java
-javac UDP/MulticastClient.java
+cd UDP
+javac MulticastServer.java MulticastClient.java
 
 # Esecuzione (terminali separati)
-java -cp UDP MulticastServer
-java -cp UDP MulticastClient
+# Terminale 1 - Server
+java MulticastServer
+
+# Terminale 2 e 3 - Client (puoi aprire più client)
+java MulticastClient
 ```
 
 ## Requisiti

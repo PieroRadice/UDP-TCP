@@ -1,8 +1,5 @@
-package clientStr;
-
 import java.io.*;
 import java.net.*;
-
 public class ClientThread {
 	String nomeServer = "localhost"; // indirizzo server locale
 	int portaServer = 6789; // porta x servizio data e ora
@@ -26,7 +23,7 @@ public class ClientThread {
 				stringaRicevutaDalServer = inDalServer.readLine();
 				System.out.println("8 e mezzo ... risposta dal server " + '\n' + stringaRicevutaDalServer.toUpperCase());
 				// chiudo la connessione
-				if (stringaRicevutaDalServer == null ||stringaRicevutaDalServer == "FINE") {
+				if (stringaRicevutaDalServer == null || "FINE".equals(stringaRicevutaDalServer)) {
 					System.out.println("9 CLIENT: termina elaborazione e chiude connessione");
 					miosocket.close();
 					break;

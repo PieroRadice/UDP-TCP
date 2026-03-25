@@ -1,4 +1,3 @@
-package serverStr;
 import java.io.*;
 import java.net.*;
 public class ServerStr 
